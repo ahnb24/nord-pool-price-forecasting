@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+
+# Downloaded market data and regenerable hourly outputs.
+/data/raw/*
+!/data/raw/nord_pool/
+/data/raw/nord_pool/*
+!/data/raw/nord_pool/NP.csv.source.json
+/data/processed/nord_pool/model_dataset.csv
+/results/tables/**/hourly_audit.csv
+/results/tables/**/*_forecasts.csv.gz
+
+/10-day-electricity-markets-and-state-space-plan.pdf

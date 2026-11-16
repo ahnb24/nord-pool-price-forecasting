@@ -1,0 +1,226 @@
+{
+  "candidate_market": "GB hourly N2EX day-ahead auction",
+  "issue_time_uk": "09:45:00",
+  "sample_from": "2025-11-03",
+  "sample_through": "2025-11-09",
+  "dst_dates": [
+    "2025-03-30",
+    "2025-10-26"
+  ],
+  "price_archive_first_hour_utc": "2021-09-20T22:00:00+00:00",
+  "price_archive_last_hour_utc": "2026-11-16T22:00:00+00:00",
+  "sources": {
+    "price": {
+      "docs": "https://www.neso.energy/data-portal/day-ahead-power-exchange-prices-nordpool/_n2ex_gb_day-ahead_price",
+      "unit": "GBP/MWh",
+      "clock": "GMT/UTC",
+      "terms": "https://www.neso.energy/data-portal/neso-open-licence",
+      "attribution": "Supported by National Energy SO Open Data"
+    },
+    "forecasts": {
+      "load_docs": "https://bmrs.elexon.co.uk/api-documentation/endpoint/datasets/DATL/stream",
+      "renewables_docs": "https://bmrs.elexon.co.uk/api-documentation/endpoint/datasets/DGWS/stream",
+      "unit": "MW",
+      "terms": "https://developer.data.elexon.co.uk/"
+    },
+    "auction": {
+      "rulebook": "https://www.nordpoolgroup.com/48e283/globalassets/download-center/rules-and-regulations/day-ahead-market-regulations-gb-market.pdf",
+      "product_specifications": "https://www.nordpoolgroup.com/4ab576/globalassets/download-center/rules-and-regulations/product-specifications-gb-market.pdf",
+      "normal_results_time": "https://www.nordpoolgroup.com/en/message-center-container/newsroom/exchange-message-list/2021/q4/nord-pool-welcomes-nsl-launch/"
+    }
+  },
+  "limitations": [
+    "Forecast availability is based on Elexon's archived publishTime fields.",
+    "The publication query spans D-3 through D for each sampled auction delivery day D.",
+    "DGWS coverage uses the Day ahead process. Other processes remain in the raw snapshots.",
+    "The NESO archive has no per-auction publication timestamps. The schedule columns give normal timings. Actual availability of lagged auction results requires separate evidence.",
+    "Use daily coverage across a longer sample to choose a study period."
+  ],
+  "snapshots": [
+    {
+      "file": "neso_n2ex.csv",
+      "url": "https://api.neso.energy/datastore/dump/4f27eea5-7038-4f73-9740-e3e4ad47c26a",
+      "retrieved_utc": "2026-11-16T10:27:30.106223+00:00"
+    },
+    {
+      "file": "datl_2025-03-27.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-03-27T00%3A00%3A00Z&publishDateTimeTo=2025-03-28T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:30.795810+00:00"
+    },
+    {
+      "file": "dgws_2025-03-27.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-03-27T00%3A00%3A00Z&publishDateTimeTo=2025-03-28T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:31.063246+00:00"
+    },
+    {
+      "file": "datl_2025-03-28.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-03-28T00%3A00%3A00Z&publishDateTimeTo=2025-03-29T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:31.271259+00:00"
+    },
+    {
+      "file": "dgws_2025-03-28.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-03-28T00%3A00%3A00Z&publishDateTimeTo=2025-03-29T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:31.539542+00:00"
+    },
+    {
+      "file": "datl_2025-03-29.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-03-29T00%3A00%3A00Z&publishDateTimeTo=2025-03-30T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:31.757847+00:00"
+    },
+    {
+      "file": "dgws_2025-03-29.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-03-29T00%3A00%3A00Z&publishDateTimeTo=2025-03-30T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:32.007991+00:00"
+    },
+    {
+      "file": "datl_2025-03-30.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-03-30T00%3A00%3A00Z&publishDateTimeTo=2025-03-31T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:32.235160+00:00"
+    },
+    {
+      "file": "dgws_2025-03-30.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-03-30T00%3A00%3A00Z&publishDateTimeTo=2025-03-31T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:32.503359+00:00"
+    },
+    {
+      "file": "datl_2025-10-23.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-10-23T00%3A00%3A00Z&publishDateTimeTo=2025-10-24T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:32.774322+00:00"
+    },
+    {
+      "file": "dgws_2025-10-23.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-10-23T00%3A00%3A00Z&publishDateTimeTo=2025-10-24T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:33.042310+00:00"
+    },
+    {
+      "file": "datl_2025-10-24.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-10-24T00%3A00%3A00Z&publishDateTimeTo=2025-10-25T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:33.316127+00:00"
+    },
+    {
+      "file": "dgws_2025-10-24.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-10-24T00%3A00%3A00Z&publishDateTimeTo=2025-10-25T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:33.575489+00:00"
+    },
+    {
+      "file": "datl_2025-10-25.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-10-25T00%3A00%3A00Z&publishDateTimeTo=2025-10-26T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:33.823159+00:00"
+    },
+    {
+      "file": "dgws_2025-10-25.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-10-25T00%3A00%3A00Z&publishDateTimeTo=2025-10-26T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:34.059084+00:00"
+    },
+    {
+      "file": "datl_2025-10-26.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-10-26T00%3A00%3A00Z&publishDateTimeTo=2025-10-27T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:34.281342+00:00"
+    },
+    {
+      "file": "dgws_2025-10-26.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-10-26T00%3A00%3A00Z&publishDateTimeTo=2025-10-27T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:34.566273+00:00"
+    },
+    {
+      "file": "datl_2025-10-31.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-10-31T00%3A00%3A00Z&publishDateTimeTo=2025-11-01T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:34.798586+00:00"
+    },
+    {
+      "file": "dgws_2025-10-31.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-10-31T00%3A00%3A00Z&publishDateTimeTo=2025-11-01T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:35.032778+00:00"
+    },
+    {
+      "file": "datl_2025-11-01.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-01T00%3A00%3A00Z&publishDateTimeTo=2025-11-02T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:35.232246+00:00"
+    },
+    {
+      "file": "dgws_2025-11-01.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-01T00%3A00%3A00Z&publishDateTimeTo=2025-11-02T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:27:35.500896+00:00"
+    },
+    {
+      "file": "datl_2025-11-02.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-02T00%3A00%3A00Z&publishDateTimeTo=2025-11-03T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:28:22.988544+00:00"
+    },
+    {
+      "file": "dgws_2025-11-02.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-02T00%3A00%3A00Z&publishDateTimeTo=2025-11-03T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:28:23.269216+00:00"
+    },
+    {
+      "file": "datl_2025-11-03.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-03T00%3A00%3A00Z&publishDateTimeTo=2025-11-04T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:28:23.526752+00:00"
+    },
+    {
+      "file": "dgws_2025-11-03.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-03T00%3A00%3A00Z&publishDateTimeTo=2025-11-04T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:28:23.775633+00:00"
+    },
+    {
+      "file": "datl_2025-11-04.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-04T00%3A00%3A00Z&publishDateTimeTo=2025-11-05T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:28:23.996473+00:00"
+    },
+    {
+      "file": "dgws_2025-11-04.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-04T00%3A00%3A00Z&publishDateTimeTo=2025-11-05T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:11.479137+00:00"
+    },
+    {
+      "file": "datl_2025-11-05.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-05T00%3A00%3A00Z&publishDateTimeTo=2025-11-06T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:11.764830+00:00"
+    },
+    {
+      "file": "dgws_2025-11-05.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-05T00%3A00%3A00Z&publishDateTimeTo=2025-11-06T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:12.037485+00:00"
+    },
+    {
+      "file": "datl_2025-11-06.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-06T00%3A00%3A00Z&publishDateTimeTo=2025-11-07T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:12.284309+00:00"
+    },
+    {
+      "file": "dgws_2025-11-06.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-06T00%3A00%3A00Z&publishDateTimeTo=2025-11-07T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:12.542975+00:00"
+    },
+    {
+      "file": "datl_2025-11-07.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-07T00%3A00%3A00Z&publishDateTimeTo=2025-11-08T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:12.798965+00:00"
+    },
+    {
+      "file": "dgws_2025-11-07.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-07T00%3A00%3A00Z&publishDateTimeTo=2025-11-08T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:13.057618+00:00"
+    },
+    {
+      "file": "datl_2025-11-08.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-08T00%3A00%3A00Z&publishDateTimeTo=2025-11-09T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:13.279418+00:00"
+    },
+    {
+      "file": "dgws_2025-11-08.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-08T00%3A00%3A00Z&publishDateTimeTo=2025-11-09T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:13.578981+00:00"
+    },
+    {
+      "file": "datl_2025-11-09.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DATL/stream?publishDateTimeFrom=2025-11-09T00%3A00%3A00Z&publishDateTimeTo=2025-11-10T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:29:13.823316+00:00"
+    },
+    {
+      "file": "dgws_2025-11-09.json",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DGWS/stream?publishDateTimeFrom=2025-11-09T00%3A00%3A00Z&publishDateTimeTo=2025-11-10T00%3A00%3A00Z",
+      "retrieved_utc": "2026-11-16T10:30:01.377015+00:00"
+    }
+  ]
+}

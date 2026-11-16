@@ -1,0 +1,10 @@
+auction_delivery_day,daylight_saving_check,expected_hours,price_hours,duplicate_price_hours,load_hours_before_cutoff,wind_onshore_hours_before_cutoff,wind_offshore_hours_before_cutoff,solar_hours_before_cutoff,joint_hours_before_cutoff
+2025-03-30,True,23,23,0,1,1,1,1,1
+2025-10-26,True,25,25,0,2,2,2,2,2
+2025-11-03,False,24,24,0,1,1,1,1,1
+2025-11-04,False,24,24,0,1,1,1,1,1
+2025-11-05,False,24,24,0,1,1,1,1,1
+2025-11-06,False,24,24,0,1,1,1,1,1
+2025-11-07,False,24,24,0,1,1,1,1,1
+2025-11-08,False,24,24,0,1,1,1,1,1
+2025-11-09,False,24,24,0,1,1,1,1,1

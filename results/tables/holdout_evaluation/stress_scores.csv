@@ -1,0 +1,13 @@
+event,model,scored_hours,scored_days,mean_crps,mae,coverage_90,mean_width_90
+high_price,fundamentals_kalman_fixed,1289,137,3.5562177317888706,4.460259429417811,0.7936384794414275,12.33676351277392
+high_price,fundamentals_kalman_adaptive,1289,137,3.566417345000684,4.470543877487901,0.7951900698215671,12.375093649178751
+high_price,price_history,1289,137,4.0377782851374935,5.028764709440148,0.7540729247478666,12.132207265652859
+high_price,fundamentals_ewma,1289,137,4.185421176644738,5.451757258891311,0.7750193948797518,12.169756724120992
+high_price,seasonal_naive,1289,137,5.755144223199149,7.481489526764934,0.7323506594259116,19.550488363072144
+high_price,fundamentals,1289,137,6.697586577902207,8.919739248729526,0.6082234290147401,18.61395932516344
+negative_price,seasonal_naive,0,0,,,,
+negative_price,price_history,0,0,,,,
+negative_price,fundamentals,0,0,,,,
+negative_price,fundamentals_ewma,0,0,,,,
+negative_price,fundamentals_kalman_fixed,0,0,,,,
+negative_price,fundamentals_kalman_adaptive,0,0,,,,

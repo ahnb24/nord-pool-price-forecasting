@@ -1,0 +1,40 @@
+{
+  "source": {
+    "file": "NP.csv",
+    "url": "https://zenodo.org/records/4624805/files/NP.csv",
+    "retrieved_utc": "2026-11-16T10:36:54.027238+00:00"
+  },
+  "source_sha256": "a077763129e9b01dc0f9d27ef4376db4c6bbbe3e16d3bb7df47a10b20d0fdee7",
+  "split_windows_inclusive": {
+    "train": [
+      "2013-01-01",
+      "2015-12-28"
+    ],
+    "validation": [
+      "2015-12-29",
+      "2016-12-26"
+    ],
+    "test": [
+      "2016-12-27",
+      "2018-12-24"
+    ]
+  },
+  "timestamp_policy": "Use the benchmark's local hourly labels. Its authors averaged the repeated autumn hour and interpolated the missing spring hour.",
+  "forecast_availability": "Use the published day-ahead forecast columns. The CSV omits publication timestamps and revision history.",
+  "missing_data_policy": "Keep absent hours and missing values as blanks.",
+  "exact_duplicate_rows_removed": 0,
+  "development_high_price_threshold_eur_per_mwh": 53.34440000000002,
+  "columns": {
+    "delivery_start_local": "Hourly delivery label on the benchmark clock.",
+    "delivery_day": "Calendar date on the benchmark clock.",
+    "hour": "Hour of day from 0 to 23.",
+    "weekday": "Day of week from 0 (Monday) to 6 (Sunday).",
+    "split": "Chronological train, validation, or test window.",
+    "price_eur_per_mwh": "Observed day-ahead auction price in EUR/MWh. Model target.",
+    "load_forecast_mw": "Day-ahead grid load forecast in MW.",
+    "wind_forecast_mw": "Day-ahead wind generation forecast in MW.",
+    "load_minus_wind_mw": "Load forecast minus wind forecast in MW.",
+    "source_row_present": "Whether the original CSV contained this hour.",
+    "complete_case": "Whether price, load, and wind are all present."
+  }
+}
