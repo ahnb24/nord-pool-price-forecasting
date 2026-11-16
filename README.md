@@ -1,4 +1,4 @@
-# Adaptive state-space correction of electricity-price forecasts
+# Nord Pool Day-Ahead Price Forecasting
 
 Does adapting the process variance of a Kalman correction improve probabilistic day-ahead electricity-price forecasts? This project compares four baselines with fixed and adaptive Kalman corrections using hourly Nordic Nord Pool prices and day-ahead load and wind forecasts.
 
